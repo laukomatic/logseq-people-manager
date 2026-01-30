@@ -1,0 +1,43 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Package plugin
+        run: |
+          mkdir -p release
+          cp -r dist/* release/
+          cp package.json release/
+          cp README.md release/
+          cp LICENSE release/
+          cp icon.svg release/
+          cp icon.png release/ 2>/dev/null || true
+          cd release && zip -r ../logseq-people-manager.zip .
+          
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: logseq-people-manager.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

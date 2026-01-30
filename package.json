@@ -1,0 +1,38 @@
+{
+  "name": "logseq-people-manager",
+  "version": "1.0.0",
+  "description": "Birthday reminders and contact tracking for your #people entries. Never miss a birthday or forget to stay in touch.",
+  "main": "dist/index.html",
+  "author": "laukom",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laukom/logseq-people-manager.git"
+  },
+  "keywords": [
+    "logseq",
+    "plugin",
+    "people",
+    "contacts",
+    "birthday",
+    "reminders",
+    "crm"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run fix-html",
+    "fix-html": "node -e \"const fs=require('fs'); let html=fs.readFileSync('dist/index.html','utf8'); html=html.replace('<script type=\\\"module\\\" crossorigin src=\\\"./index.js\\\"></script>','<script src=\\\"./index.js\\\"></script>'); fs.writeFileSync('dist/index.html',html); console.log('Fixed script tag in index.html');\""
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.2.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vite": "^5.4.0"
+  },
+  "logseq": {
+    "id": "logseq-people-manager",
+    "title": "People Manager",
+    "icon": "./icon.svg"
+  }
+}
