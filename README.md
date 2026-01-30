@@ -2,7 +2,6 @@
 
 A plugin for managing contacts, tracking birthdays, and staying in touch with the people who matter.
 
-![People Manager Screenshot](./screenshots/main-panel.png)
 
 ## Features
 
@@ -21,7 +20,6 @@ A plugin for managing contacts, tracking birthdays, and staying in touch with th
 - Type birthdays naturally: `15 Apr 1988`, `April 15, 1988`, `1988-04-15`
 - Live preview shows parsed date as you type
 
-![Add Person Form](./screenshots/add-person.png)
 
 ## Installation
 
