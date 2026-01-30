@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Birthday reminders and contact tracking for your #people entries. Never miss a birthday or forget to stay in touch.",
   "main": "dist/index.html",
-  "author": "laukom",
+  "author": "laukomatic",
   "license": "MIT",
   "repository": {
     "type": "git",

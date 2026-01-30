@@ -30,7 +30,7 @@ A plugin for managing contacts, tracking birthdays, and staying in touch with th
 4. Click Install
 
 ### Manual Installation
-1. Download the latest release from [GitHub Releases](https://github.com/laukom/logseq-people-manager/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/laukomatic/logseq-people-manager/releases)
 2. Unzip the file
 3. In Logseq, go to Plugins > Load unpacked plugin
 4. Select the unzipped folder
