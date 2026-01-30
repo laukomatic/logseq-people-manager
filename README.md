@@ -103,11 +103,3 @@ npm run build
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## Author
-
-Made by [laukom](https://github.com/laukom)
-
-## Support
-
-- [Report an issue](https://github.com/laukom/logseq-people-manager/issues)
-- [Feature requests](https://github.com/laukom/logseq-people-manager/issues/new)
